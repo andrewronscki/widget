@@ -1,5 +1,5 @@
-# widget
-
+# Criando um Widget para seu site
+## Nos arquivos *.js* deste projeto há as explicações em cada etapa do código
 ## Para testar, no seu HTML importe o script desta forma:
 ```html
 <!DOCTYPE html>
