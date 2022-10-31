@@ -25,7 +25,7 @@ No exemplo que trouxemos para este projeto, estamos provisionando um **bucket S3
 
 ## CI-CD da aplicação utilizando github actions
 
-Dentro da pasta `.github/workflows` há um arquivo chamado `pipeline.yml` que se trata da escrita da automatização do processo de _deploy_ do **Widget**, para isso no seu projeto do **GitHub** você deve configurar duas **Secrets**, uma para **AWS_ACCESS_KEY_ID** e outra para **AWS_SECRET_ACCESS_KEY**:
+Dentro da pasta `.github/workflows` há um arquivo chamado `pipeline.yml` que se trata da escrita da automatização do processo de _deploy_ do **Widget**, para isso no seu projeto do **GitHub** ou **GitLab** você deve configurar duas **Secrets**, uma para **AWS_ACCESS_KEY_ID** e outra para **AWS_SECRET_ACCESS_KEY**:
 
 - A alteração que você deve fazer neste arquivo é somente o nome do `bucket S3` na linha **35**
 
