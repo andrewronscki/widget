@@ -6,19 +6,15 @@ terraform {
       version = "~> 4.0"
     }
   }
-
-	backend "s3" {
+  backend "s3" {
     bucket         = "andrewronscki-devops-terraform-state"
-    key            = "widget/terraform.tfstate"
-    dynamodb_table = "andrewronscki-devops-terraform-state"
+    key            = "global/terraform.tfstate"
     region         = "us-east-1"
+    dynamodb_table = "andrewronscki-devops-terraform-state"
     profile        = "default"
   }
 }
-
 provider "aws" {
-  region  = "us-east-1"
-  profile = "default"
+  profile = var.aws_profile
+  region  = var.aws_region
 }
-
-
