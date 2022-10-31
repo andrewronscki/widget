@@ -12,6 +12,8 @@
 
 **Terraform é utilizado para provisionar a infraestrutura com código**
 
+Recentemente foi adicionado o uso do `remote-state` para controlar o estado da infra remotamente, para entender mais sobre, basta ler o seguinte artigo https://andrewronscki.medium.com/terraform-com-remote-state-e-trabalhando-com-multi-regi%C3%B5es-utilizando-workspace-596a3fb44463.
+
 No exemplo que trouxemos para este projeto, estamos provisionando um **bucket S3** com acesso público para leitura. Para você conseguir provisionar a sua infra, é necessário a instalação da **AWS-CLI** e do **Terraform** na sua máquina, tendo esses dois instalados basta você:
 
 - Ir na pasta `terraform` no seu terminal;
