@@ -1,0 +1,9 @@
+image: node:latest
+
+stages:
+  - setup
+  - build
+  - deploy
+
+include:
+  - local: "/.gitlab/pipeline.yml"

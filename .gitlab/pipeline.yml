@@ -1,0 +1,31 @@
+install:
+  stage: setup
+  script: npm install
+  artifacts:
+    paths:
+      - node_modules
+
+build:
+  stage: build
+  script: npm run build
+  dependencies:
+    - install
+  artifacts:
+    paths:
+      - dist
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  image:
+    name: banst/awscli
+    entrypoint: [""]
+  script:
+    - aws configure set region us-east-1
+    - aws s3 sync ./dist/ s3://andrewronscki-widget-bucket --delete --acl public-read
+    - aws s3 cp foo.txt s3://$S3_BUCKET/foo.txt
+  only:
+    - main
+  dependencies:
+    - build
